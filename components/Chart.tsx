@@ -42,25 +42,34 @@ const options = {
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
 
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(245,165,36)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
 const Chart = () => {
+  const [dataLabel, setDataLabel] = React.useState<any>(null);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setDataLabel(labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: dataLabel || labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+        borderColor: 'rgb(245,165,36)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      {
+        label: 'Dataset 2',
+        data: dataLabel || labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+        borderColor: 'rgb(53, 162, 235)',
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      },
+    ],
+  };
+
   return (
     <div className='flex items-center justify-between w-[90dvw] flex-wrap md:flex-nowrap gap-4'>
     <div className='bg-[#18181b]/90 w-[100%] md:w-[49%] rounded-2xl p-2 px-6 backdrop-blur-md'>
