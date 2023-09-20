@@ -72,7 +72,7 @@ const Chart = () => {
       {
         label: 'Dataset 2',
         data: dataLabel2 || labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-        borderColor: 'rgb(53, 162, 235)',
+        borderColor: 'rgb(24,201,100)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },
     ],

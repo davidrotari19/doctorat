@@ -40,7 +40,7 @@ let [showBurger, setShowBurger] = useState(false)
           as={Link}
           href='/'
           color='warning'
-          variant='ghost'
+          variant='shadow'
           startContent={<TbSmartHome />}
         >
           Acasa
@@ -49,7 +49,7 @@ let [showBurger, setShowBurger] = useState(false)
           as={Link}
           href='/about'
           color='warning'
-          variant='ghost'
+          variant='shadow'
           startContent={<IoIosInformationCircle />}
         >
           Despre
@@ -57,8 +57,8 @@ let [showBurger, setShowBurger] = useState(false)
         <Button
           as={Link}
           href='/statistics'
-          color='warning'
-          variant='ghost'
+          color='success'
+          variant='shadow'
           startContent={<ImStatsBars />}
         >
           Statistici
@@ -67,7 +67,7 @@ let [showBurger, setShowBurger] = useState(false)
           as={Link}
           href='/contacts'
           color='warning'
-          variant='ghost'
+          variant='shadow'
           startContent={<IoMdContacts />}
         >
           Contacte
