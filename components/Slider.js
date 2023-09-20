@@ -13,7 +13,7 @@ const Slider = () => {
             <div className="embla__container h-[200px]">
                 <div className="embla__slide">
                     <img
-                    className='w-full  object-cover opacity-60'
+                    className='w-full  object-cover opacity-80'
                         src="/1.jpg"
                         alt="Picture of the author"
                         width={500}
@@ -23,7 +23,7 @@ const Slider = () => {
                 </div>
                 <div className="embla__slide">
                 <img
-                    className='w-full  object-cover  opacity-60'
+                    className='w-full  object-cover  opacity-80'
                         src="/3.jpg"
                         alt="Picture of the author"
                         width={500}
@@ -32,7 +32,7 @@ const Slider = () => {
                 </div>
                 <div className="embla__slide">
                 <img
-                    className='w-full object-cover  opacity-60'
+                    className='w-full object-cover  opacity-80'
                         src="/2.jpg"
                         alt="Picture of the author"
                         width={500}

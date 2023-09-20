@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Button } from '@nextui-org/react'
 import { ImStatsBars } from 'react-icons/im'
 import { IoMdContacts } from 'react-icons/io'
+import { TbSmartHome } from 'react-icons/tb'
 import { IoIosInformationCircle } from 'react-icons/io'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import { motion } from 'framer-motion'
@@ -35,6 +36,15 @@ let [showBurger, setShowBurger] = useState(false)
         </div>
       </Link>
       <div className='items-center gap-6  md:flex hidden'>
+      <Button
+          as={Link}
+          href='/'
+          color='warning'
+          variant='ghost'
+          startContent={<TbSmartHome />}
+        >
+          Acasa
+        </Button>
         <Button
           as={Link}
           href='/about'
