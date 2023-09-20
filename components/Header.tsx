@@ -7,12 +7,11 @@ import { ImStatsBars } from 'react-icons/im'
 import { IoMdContacts } from 'react-icons/io'
 import { IoIosInformationCircle } from 'react-icons/io'
 import {RxHamburgerMenu} from 'react-icons/rx'
-
+import { motion } from 'framer-motion'
 const Header = () => {
 let [showBurger, setShowBurger] = useState(false)
 
   const showBurgerMenu = () => {
-    console.log('showBurgerMenu')
     setShowBurger(!showBurger)
   }
 
@@ -77,7 +76,12 @@ let [showBurger, setShowBurger] = useState(false)
 
     </header>
     {showBurger ? (
-      <div className='flex px-3 flex-col justify-center gap-4 pt-8 pb-4 items-center w-full h-full bg-[#18181b] backdrop-blur-md'>
+      <motion.div 
+      className='flex px-3 flex-col justify-center gap-4 pt-8 pb-4 items-center w-full h-full bg-[#18181b] backdrop-blur-md'
+      initial={{opacity: 0, y: -100}}
+      animate={{opacity: 1, y: 0}}
+      transition={{duration: 0.2}}
+      >
         <Button
           as={Link}
           href='/about'
@@ -108,7 +112,7 @@ let [showBurger, setShowBurger] = useState(false)
         >
           Contacte
         </Button>
-      </div>
+      </motion.div  >
     ) : null}
     </>
   )
