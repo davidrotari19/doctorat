@@ -60,8 +60,8 @@ export const data = {
 };
 const Chart = () => {
   return (
-    <div className='flex items-center justify-between w-[90dvw]'>
-    <div className='bg-[#18181b]/90 w-[49%] rounded-2xl p-2 px-6 backdrop-blur-md'>
+    <div className='flex items-center justify-between w-[90dvw] flex-wrap md:flex-nowrap gap-4'>
+    <div className='bg-[#18181b]/90 w-[100%] md:w-[49%] rounded-2xl p-2 px-6 backdrop-blur-md'>
       <h3 className='text-2xl font-bold text-white mb-0'>
         Text Statistici
       </h3>
@@ -70,7 +70,7 @@ const Chart = () => {
       </span>
         <Line data={data} options={options} />
     </div>
-    <div className='bg-[#18181b]/90 w-[49%] rounded-2xl p-2 px-6 backdrop-blur-md'>
+    <div className='bg-[#18181b]/90  w-[100%] md:w-[49%]  rounded-2xl p-2 px-6 backdrop-blur-md'>
       <h3 className='text-2xl font-bold text-white mb-0'>
         Text Statistici
       </h3>
