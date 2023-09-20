@@ -9,7 +9,7 @@ const Slider = () => {
         stopOnInteraction: true,
     })])
     return (
-        <div className="embla mt-8 mb-20 w-[90dvw] rounded-3xl" ref={emblaRef}>
+        <div className="embla mt-8 mb-30 w-[90dvw] rounded-3xl" ref={emblaRef}>
             <div className="embla__container h-[200px]">
                 <div className="embla__slide">
                     <img
