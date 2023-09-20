@@ -13,6 +13,8 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
+import { IoIosStats } from 'react-icons/io';
+import { BiSolidTimeFive } from 'react-icons/bi';
 
 ChartJS.register(
   CategoryScale,
@@ -62,19 +64,23 @@ const Chart = () => {
   return (
     <div className='flex items-center justify-between w-[90dvw] flex-wrap md:flex-nowrap gap-4'>
     <div className='bg-[#18181b]/90 w-[100%] md:w-[49%] rounded-2xl p-2 px-6 backdrop-blur-md'>
-      <h3 className='text-2xl font-bold text-white mb-0'>
+      <h3 className='text-2xl font-bold text-white mb-0 flex items-center gap-2'>
+        <IoIosStats />
         Text Statistici
       </h3>
-      <span className='text-gray-400 text-xs'>
+      <span className='text-gray-400 text-xs flex items-center gap-1'>
+        <BiSolidTimeFive />
         Actualizat acum 5 minute
       </span>
         <Line data={data} options={options} />
     </div>
     <div className='bg-[#18181b]/90  w-[100%] md:w-[49%]  rounded-2xl p-2 px-6 backdrop-blur-md'>
-      <h3 className='text-2xl font-bold text-white mb-0'>
+    <h3 className='text-2xl font-bold text-white mb-0 flex items-center gap-2'>
+        <IoIosStats />
         Text Statistici
       </h3>
-      <span className='text-gray-400 text-xs'>
+      <span className='text-gray-400 text-xs flex items-center gap-1'>
+        <BiSolidTimeFive />
         Actualizat acum 5 minute
       </span>
         <Line data={data} options={options} />

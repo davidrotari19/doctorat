@@ -23,7 +23,11 @@ const STATS = [
 
 const TableStats = () => {
   return (
-    <Table aria-label="Example static collection table" className='w-[90dvw] mt-10 mb-20' >
+    <div className='flex flex-col items-start w-[90dvw] mt-10 mb-20 '>
+      <h4 className='text-2xl font-bold text-white mb-4'>
+        Statistici
+      </h4>
+    <Table aria-label="Example static collection table" className='' >
       <TableHeader>
         <TableColumn>NUME</TableColumn>
         <TableColumn>VALOARE</TableColumn>
@@ -40,7 +44,7 @@ const TableStats = () => {
 
       </TableBody>
     </Table>
-
+    </div>
   )
 }
 
