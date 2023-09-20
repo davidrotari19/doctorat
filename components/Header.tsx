@@ -1,14 +1,24 @@
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@nextui-org/react'
 import { ImStatsBars } from 'react-icons/im'
 import { IoMdContacts } from 'react-icons/io'
 import { IoIosInformationCircle } from 'react-icons/io'
+import {RxHamburgerMenu} from 'react-icons/rx'
+
 const Header = () => {
+let [showBurger, setShowBurger] = useState(false)
+
+  const showBurgerMenu = () => {
+    console.log('showBurgerMenu')
+    setShowBurger(!showBurger)
+  }
+
   return (
-    <header className='w-full flex relative z-50 justify-between px-8 bg-[#18181b] backdrop-blur-md'>
+    <>
+    <header className='w-full flex z-50 justify-between px-2 md:px-8 items-center bg-[#18181b] backdrop-blur-md'>
       <Link className='p-1 flex items-center z-30' href={'/'} >
         <Image
           src='/logo.png'
@@ -54,8 +64,53 @@ const Header = () => {
           Contacte
         </Button>
       </div>
+      <Button
+        isIconOnly
+        color='warning'
+        variant='ghost'
+        aria-label='Mobile menu'
+        className='md:hidden'
+        onClick={showBurgerMenu}
+        >
+          <RxHamburgerMenu />
+        </Button>
 
     </header>
+    {showBurger ? (
+      <div className='flex px-3 flex-col justify-center gap-4 pt-8 pb-4 items-center w-full h-full bg-[#18181b] backdrop-blur-md'>
+        <Button
+          as={Link}
+          href='/about'
+          color='warning'
+          variant='ghost'
+          className='w-full'
+          startContent={<IoIosInformationCircle />}
+        >
+          Despre
+        </Button>
+        <Button
+          as={Link}
+          href='/statistics'
+          color='warning'
+          variant='ghost'
+          className='w-full'
+          startContent={<ImStatsBars />}
+        >
+          Statistici
+        </Button>
+        <Button
+          as={Link}
+          href='/contacts'
+          color='warning'
+          variant='ghost'
+          className='w-full '
+          startContent={<IoMdContacts />}
+        >
+          Contacte
+        </Button>
+      </div>
+    ) : null}
+    </>
   )
 }
 
