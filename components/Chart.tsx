@@ -44,12 +44,20 @@ const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
 const Chart = () => {
   const [dataLabel, setDataLabel] = React.useState<any>(null);
-
+  const [dataLabel2, setDataLabel2] = React.useState<any>(null);
   React.useEffect(() => {
     const interval = setInterval(() => {
       setDataLabel(labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })));
     }, 5000);
-    return () => clearInterval(interval);
+    const interval2 = setInterval(() => {
+      setDataLabel2(labels.map(() => faker.datatype.number({ min: -500, max: 2000 })));
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(interval2);
+    }
+
   }, []);
 
   const data = {
@@ -63,7 +71,7 @@ const Chart = () => {
       },
       {
         label: 'Dataset 2',
-        data: dataLabel || labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+        data: dataLabel2 || labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },
