@@ -28,10 +28,10 @@ let [showBurger, setShowBurger] = useState(false)
         />
         <div className='flex flex-col ml-2 text-left'>
           <h1 className='text-xl font-bold text-white '>
-            Universitatea din Petrosani
+            Universitatea din Petroșani
           </h1>
           <span className='text-gray-400 text-sm'>
-            Facultatea de Inginerie
+            Facultatea de I.M.E
           </span>
         </div>
       </Link>
