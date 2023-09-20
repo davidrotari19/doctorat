@@ -31,7 +31,7 @@ let [showBurger, setShowBurger] = useState(false)
             Universitatea din Petroșani
           </h1>
           <span className='text-gray-400 text-sm'>
-            Facultatea de I.M.E
+            Facultatea de MINE
           </span>
         </div>
       </Link>
